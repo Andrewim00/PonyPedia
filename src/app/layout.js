@@ -1,13 +1,15 @@
 import { Roboto, Cherry_Bomb_One } from "next/font/google";
-import "../css-app/globals.css";
 import "../css-app/reset.css";
+import "../css-app/globals.css";
+
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ['latin'],
 });
 
-const cherry_bomb = Cherry_Bomb_One({
+const cherryBombOne = Cherry_Bomb_One({
+  weight: "400",
   variable: "--font-cherry-bomb-one",
   subsets: ['latin'],
 });
@@ -19,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="pt-br">
+      <body className={`${roboto.variable} ${cherryBombOne.variable}`}>
         {children}
       </body>
     </html>
