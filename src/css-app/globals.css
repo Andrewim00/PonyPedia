@@ -4,3 +4,13 @@ html {
     scroll-behavior: smooth;
     max-width: 100vw;
 }
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+nav.menu {
+    max-width: ;
+}
