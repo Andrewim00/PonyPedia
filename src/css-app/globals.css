@@ -1,16 +1,38 @@
 
 html {
+    /*Define o tamanho base da fonte para 10px (10px = 0,625rem, logo, 1rem = 10px)*/
     font-size: 62.5%;
+
     scroll-behavior: smooth;
     max-width: 100vw;
+}
+
+body {
+    box-sizing: border-box;
+
+    max-width: 192rem;
+    min-height: 100vh;
+
+    border: solid 10px red;
+
+    display: flex;
+    justify-content: center;
 }
 
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    max-width: 192rem;
+    min-width: 32rem;
+
+    border: solid 10px red;
 }
 
 nav.menu {
-    max-width: ;
+    max-width: 190rem;
+    min-width: 30rem;
+    height: 1rem;
+    background-color: blueviolet;
 }
