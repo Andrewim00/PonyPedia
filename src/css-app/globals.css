@@ -11,28 +11,40 @@ body {
     box-sizing: border-box;
 
     max-width: 192rem;
-    min-height: 100vh;
 
-    border: solid 10px red;
+    min-height: 100vh;
+    min-width: 32rem;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+
+    font-size: 1.6rem;
+    overflow-y: scroll;
+
+    padding: 0;
+    margin: 0;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
 
-    max-width: 192rem;
-    min-width: 32rem;
-
-    border: solid 10px red;
+.logo {
+    margin: 2rem 0rem;
+    border: 0.2rem solid purple;
 }
 
 nav.menu {
-    max-width: 190rem;
-    min-width: 30rem;
-    height: 1rem;
+    max-width: 192rem;
+    min-width: 32rem;
+
+    height: 3rem;
+    padding: 1rem;
+    margin: 2rem 2rem;
+
+    border-radius: 4rem;
+
     background-color: blueviolet;
 }
