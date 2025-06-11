@@ -1,25 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
 
 
 export default function informationPage(){
     return (
         <div>
-            <header>
-                <Image 
-                src="/logo.png"
-                width={350}
-                height={350}
-                alt="Logo PoneyPédia"/>
-                <nav className="menu">
-                    <div>
+            <SiteHeader/>
+            
+            <section></section>
 
-                    </div>
-                    <Link href={'/login'}>
-
-                    </Link>
-                </nav>
-            </header>
+            <footer></footer>
         </div>
     );
 }
