@@ -40,6 +40,8 @@ header {
     margin: 2rem 0rem;
     border: 0.2rem solid #9656A3;
     border-radius: 1rem;
+    max-width: 35rem;
+    width: 100%;
 }
 
 .logo-container {
@@ -101,9 +103,22 @@ nav.menu {
     border-radius: 4rem;
 }
 
-/* @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
     .logo {
-        width: 5rem;
-        height: 5rem;
+        max-width: 25rem;
     }
-} */
+
+    .logo-container {
+        max-width: 25rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        max-width: 15rem;
+    }
+
+    .logo-container {
+        max-width: 15rem;
+    }
+}
