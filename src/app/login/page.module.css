@@ -1,0 +1,91 @@
+.bodyLoginContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Garante que o container ocupe a altura total da viewport */
+  padding: 20px; /* Adiciona um padding para evitar que a caixa de login toque as bordas */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.85); /* Branco com 85% de opacidade */
+  padding: 40px 50px; /* Adicione padding vertical para dar espaço ao conteúdo */
+  border-radius: 10px; /* Bordas levemente arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidade */
+  width: 100%;
+  max-width: 450px; /* Largura máxima para a caixa de login */
+  text-align: center;
+  /* Adicione estas propriedades para controlar o alinhamento vertical e evitar esticamento */
+  justify-content: center; /* Centraliza o conteúdo verticalmente dentro do loginBox */
+  align-items: center; /* Centraliza o conteúdo horizontalmente (para itens que não se esticam 100% da largura) */
+  /* Remova qualquer height ou min-height que possa estar fazendo-o esticar */
+  height: auto; /* Garante que a altura se ajuste ao conteúdo */
+}
+
+.title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os elementos do formulário */
+  margin-bottom: 20px;
+}
+
+.label {
+  font-size: 1.1em;
+  color: #555;
+  text-align: left; /* Alinha o texto do label à esquerda */
+  margin-bottom: 5px; /* Pequeno espaçamento entre o label e o input */
+  font-weight: 500;
+}
+
+.input {
+  width: calc(100% - 20px); /* Ajusta a largura para o padding */
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none; /* Remove a borda de foco padrão */
+  transition: border-color 0.3s ease; /* Transição suave na cor da borda */
+}
+
+.input:focus {
+  border-color: #8a2be2; /* Cor da borda ao focar, similar aos detalhes roxos da imagem */
+}
+
+.button {
+  background-color: #8a2be2; /* Cor roxa similar ao botão "Entrar" */
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+  margin-top: 15px; /* Espaço acima do botão */
+}
+
+.button:hover {
+  background-color: #6a1ba3; /* Tom mais escuro de roxo ao passar o mouse */
+}
+
+.forgotPassword {
+  font-size: 0.95em;
+  color: #8a2be2; /* Cor roxa para o link "Esqueceu a senha?" */
+  text-decoration: none; /* Remove sublinhado padrão */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.forgotPassword:hover {
+  color: #6a1ba3; /* Tom mais escuro de roxo ao passar o mouse */
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
