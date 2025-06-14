@@ -30,6 +30,7 @@
   margin-bottom: 30px;
   font-weight: bold;
   letter-spacing: 1px;
+  font-family: var(--font-roboto);
 }
 
 .form {
@@ -45,6 +46,7 @@
   text-align: left; /* Alinha o texto do label à esquerda */
   margin-bottom: 5px; /* Pequeno espaçamento entre o label e o input */
   font-weight: 500;
+  font-family: var(--font-roboto);
 }
 
 .input {
@@ -64,6 +66,7 @@
 .button {
   background-color: #8a2be2; /* Cor roxa similar ao botão "Entrar" */
   color: white;
+  font-family: var(--font-roboto);
   padding: 15px 25px;
   border: none;
   border-radius: 5px;
@@ -79,6 +82,7 @@
 
 .forgotPassword {
   font-size: 0.95em;
+  font-family: var(--font-roboto);
   color: #8a2be2; /* Cor roxa para o link "Esqueceu a senha?" */
   text-decoration: none; /* Remove sublinhado padrão */
   cursor: pointer;
