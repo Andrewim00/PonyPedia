@@ -1,0 +1,156 @@
+/* page.module.css */
+
+.bodyLoginContainer {
+  height: 100vh; /* Garante que o container ocupe a altura total da viewport */
+  display: flex;
+  justify-content: center; /* Centraliza a caixa horizontalmente */
+  align-items: center; /* Centraliza a caixa verticalmente */
+  /* O background da imagem principal deve ser aplicado aqui ou no body global */
+  /* Exemplo: background-image: url('/images/your-fantasy-background.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
+  padding: 20px; /* Adiciona um padding para telas menores, evitando que a caixa toque as bordas */
+  box-sizing: border-box; /* Inclui padding e borda no tamanho total do elemento */
+  overflow: auto; /* Adiciona scroll se o conteúdo for maior que a tela (importante para mobile) */
+}
+
+.loginBox { /* Usado para o box de Cadastro na imagem */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9); /* Branco com 90% de opacidade */
+  padding: 40px 50px; /* Reduzi um pouco o padding para deixar a caixa mais compacta */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25); /* Sombra suave */
+  width: 100%; /* Permite que ocupe 100% da largura disponível até o max-width */
+  max-width: 420px; /* **DIMINUÍDA** - Define uma largura máxima menor para a caixa */
+  text-align: center;
+  /* Estas propriedades já ajudam a centralizar o conteúdo dentro da caixa */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* A altura se ajusta ao conteúdo */
+  flex-shrink: 0; /* Impede que a caixa encolha além do seu conteúdo em casos de espaço limitado */
+}
+
+.title { /* "Cadastro" na imagem */
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 2.5em; /* Ligeiramente menor para se encaixar melhor na caixa diminuída */
+  color: #333;
+  margin-bottom: 35px; /* Ajustado */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espaço entre os elementos do formulário (ligeiramente reduzido) */
+  width: 100%;
+}
+
+.label {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.1em; /* Ligeiramente menor */
+  color: #555;
+  text-align: left;
+  margin-bottom: 5px; /* Ajustado */
+  font-weight: 500;
+  display: block;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 18px; /* Padding ajustado */
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1em; /* Ajustado */
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #9370DB;
+  box-shadow: 0 0 0 4px rgba(147, 112, 219, 0.3);
+  background-color: #fff;
+}
+
+.button { /* "Cadastrar" na imagem */
+  background-color: #9370DB;
+  color: white;
+  padding: 15px 30px; /* Padding ajustado */
+  border: none;
+  border-radius: 10px;
+  font-size: 1.15em; /* Ajustado */
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-top: 20px; /* Ajustado */
+  letter-spacing: 0.8px;
+  box-shadow: 0 5px 15px rgba(147, 112, 219, 0.4);
+}
+
+.button:hover {
+  background-color: #7A5CBF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(147, 112, 219, 0.5);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(147, 112, 219, 0.3);
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 600px) {
+  .loginBox {
+    padding: 30px;
+    margin: 0 15px; /* Adiciona margem lateral para evitar que toque as bordas da tela */
+    border-radius: 15px;
+  }
+
+  .title {
+    font-size: 2em;
+    margin-bottom: 25px;
+  }
+
+  .form {
+    gap: 18px;
+  }
+
+  .label {
+    font-size: 1em;
+  }
+
+  .input {
+    padding: 10px 15px;
+    font-size: 0.95em;
+    border-radius: 8px;
+  }
+
+  .button {
+    padding: 13px 25px;
+    font-size: 1.05em;
+    border-radius: 8px;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .loginBox {
+    padding: 25px;
+    margin: 0 10px; /* Reduz ainda mais a margem para telas muito pequenas */
+  }
+
+  .title {
+    font-size: 1.8em;
+  }
+
+  .input, .button {
+    padding: 8px 10px;
+    font-size: 0.9em;
+  }
+}
