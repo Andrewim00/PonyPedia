@@ -12,12 +12,19 @@ export default function informationPage(){
                 <div className={styles.bodySiteContainer}>
                     <main className={styles.mainContent}>
                         <h1 className={styles.pageTitle}>Twilight Sparkle</h1>
-                        <div></div>
+                        <p className={styles.paddingLine}></p>
+                        <p className={styles.paddingLine}></p>
+                        <div className={styles.pageContainer}>
+                            <div>
+                                <h2 className={styles.subTitle}>Aparência</h2>
+                                <p className={styles.paddingLine}></p>
+                                <p>AAAAAAAAAAAAAAAAAAA</p>
+                            </div>
+                            <aside className={styles.asideContent}>
+
+                            </aside>
+                        </div>
                     </main>
-
-                    <aside className={styles.asideContent}>
-
-                    </aside>
                 </div>
             </section>
 
