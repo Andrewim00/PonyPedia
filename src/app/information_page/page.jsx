@@ -36,7 +36,7 @@ export default function informationPage(){
                                     <h2 className={styles.title}>Twilight Sparkle</h2>
                                     <div className={styles.imageWrapper}>
                                         <Image
-                                        src="/logo.png"
+                                        src="/twilightSparkle/twilight_infobox.png"
                                         alt="Twilight Sparkle"
                                         width={300}
                                         height={300}
@@ -60,6 +60,26 @@ export default function informationPage(){
                                         <strong>Espécie:</strong><br />
                                         Unicórnio / Alicórnio
                                         </div>
+                                    </div>
+                                </div>
+                                <div className={styles.asideGroup}>
+                                    <div className={styles.wrapper}>
+                                        <Image
+                                        src="/twilightSparkle/twilight_lendo.png"
+                                        alt="Twilight Sparkle"
+                                        width={300}
+                                        height={300}
+                                        className={styles.image}
+                                        />
+                                    </div>
+                                    <div className={styles.wrapper}>
+                                        <Image
+                                        src="/twilightSparkle/twilight_jovem.png"
+                                        alt="Twilight Sparkle"
+                                        width={300}
+                                        height={300}
+                                        className={styles.image}
+                                        />
                                     </div>
                                 </div>
                             </aside>
