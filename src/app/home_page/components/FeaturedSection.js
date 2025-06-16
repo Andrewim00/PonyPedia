@@ -23,7 +23,7 @@ const FeaturedSection = () => {
       <h2 className={styles.title}>Destaques</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={30}
+        spaceBetween={15}
         slidesPerView={4}
         navigation
         pagination={{ clickable: true }}
@@ -31,6 +31,24 @@ const FeaturedSection = () => {
         autoplay={{
           delay: 3000,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 30
+          }
         }}
         className={styles.swiperContainer}
       >
