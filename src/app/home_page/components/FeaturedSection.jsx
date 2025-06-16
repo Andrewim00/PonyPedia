@@ -24,7 +24,6 @@ const FeaturedSection = () => {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={15}
-        spaceBetween={30}
         slidesPerView={4}
         navigation
         pagination={{ clickable: true }}
@@ -63,5 +62,4 @@ const FeaturedSection = () => {
   );
 };
 
-export default FeaturedSection;
 export default FeaturedSection;
