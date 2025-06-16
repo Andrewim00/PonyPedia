@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import InfoBox from "./info_page_components/InfoBox";
+import VoteSection from "./info_page_components/VoteSection";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -32,36 +34,7 @@ export default function informationPage(){
                                 <p className={styles.text}>Twilight conta como conseguiu sua cutie mark em "As Crônicas das Cutie Marks". Ela estudou magia com grande interesse quando era potro e tentou se matricular na Escola para Unicórnios Superdotados da Princesa Celestia, mas seu exame de admissão terminou em desastre quando ela não conseguiu chocar magicamente um ovo de dragão. Um momento após desistir, a onda de choque de uma explosão distante fez com que a magia de Twilight saísse do controle e causasse estragos na sala de exames. Depois que a Princesa Celestia apareceu e acalmou a situação, Twilight recobrou os sentidos e descobriu que sua cutie mark havia aparecido.</p>
                             </div>
                             <aside className={styles.asideContent}>
-                                <div className={styles.infoBox}>
-                                    <h2 className={styles.title}>Twilight Sparkle</h2>
-                                    <div className={styles.imageWrapper}>
-                                        <Image
-                                        src="/twilightSparkle/twilight_infobox.png"
-                                        alt="Twilight Sparkle"
-                                        width={300}
-                                        height={300}
-                                        className={styles.image}
-                                        />
-                                    </div>
-
-                                    <div className={styles.infoGroup}>
-
-                                        <div className={styles.infoItem}>
-                                        <strong>Papel na Série:</strong><br />
-                                        Protagonista
-                                        </div>
-
-                                        <div className={styles.infoItem}>
-                                        <strong>Local de Origem:</strong><br />
-                                        Canterlot
-                                        </div>
-                                        
-                                        <div className={styles.infoItem}>
-                                        <strong>Espécie:</strong><br />
-                                        Unicórnio / Alicórnio
-                                        </div>
-                                    </div>
-                                </div>
+                                <InfoBox/>
                                 <div className={styles.asideGroup}>
                                     <div className={styles.wrapper}>
                                         <Image
@@ -85,7 +58,7 @@ export default function informationPage(){
                             </aside>
                         </div>
                     </main>
-                    <div className={styles.vote}></div>
+                    <VoteSection/>
                 </div>
             </section>
 
