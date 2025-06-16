@@ -162,15 +162,23 @@
 
 .vote {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     max-width: 100%;
     width: 100%;
     background-color: #9656A3;
-    height: 2rem;
 
     margin-top: 3rem;
 
     border-radius: 2rem;
+}
+
+.voteText {
+    font-family: var(--font-cherry-bomb-one);
+    font-size: x-large;
+    color: #FCF1E2;
+    text-align: center;
+    line-height: 3rem;
 }
