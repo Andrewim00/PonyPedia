@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function login() {
@@ -14,7 +14,7 @@ export default function login() {
           <label className={styles.label}>Senha</label>
           <input type="password" className={styles.input} />
 
-          <button type="submit" className={styles.button}>Entrar</button>
+          <Link href={'/home_page'} className={styles.button}>Entrar</Link>
         </form>
 
         <p className={styles.forgotPassword}>Esqueceu a senha?</p>

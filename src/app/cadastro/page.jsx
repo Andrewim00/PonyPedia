@@ -1,4 +1,5 @@
-import styles from "./page.module.css"; // Assumindo que você usaria o mesmo arquivo CSS ou um similar
+import Link from "next/link";
+import styles from "./page.module.css";
 
 export default function cadastro() {
   return (
@@ -19,7 +20,7 @@ export default function cadastro() {
           <label className={styles.label}>Confirmar Senha</label>
           <input type="password" className={styles.input} />
 
-          <button type="submit" className={styles.button}>Cadastrar</button>
+          <Link href={'/home_page'} className={styles.button}>Cadastrar</Link>
         </form>
 
       </section>
