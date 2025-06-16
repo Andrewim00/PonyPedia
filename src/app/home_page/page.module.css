@@ -1,0 +1,141 @@
+.card {
+border: 2px solid #9656A3; /* Lilás claro */
+border-radius: 12px;
+overflow: hidden;
+background-color: #9656A3;
+display: flex;
+flex-direction: column;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 200px;
+height: 250px;
+}
+
+.imageContainer {
+background-color: #9656A3; /* Lavanda */
+padding: 8px;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.image {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.nameContainer {
+background-color: #9656A3; /* Roxo */
+padding: 10px;
+text-align: center;
+}
+
+.name {
+color: #FCF1E2;
+font-weight: bold;
+margin: 0;
+font-size: 1rem;
+font-family: var(--font-cherry-bomb-one);
+}
+
+.featuredSection {
+width: 100%;
+max-width: 900px;
+margin: 40px auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.title {
+color: #8a2be2; /* Roxo */
+font-size: 2.5rem;
+margin-bottom: 30px;
+font-weight: bold;
+width: 100%;
+font-family: var(--font-cherry-bomb-one);
+}
+
+/* Customização dos botões e paginação do Swiper */
+.swiperContainer {
+width: 100%;
+--swiper-navigation-color: #9656A3;
+--swiper-pagination-color: #9656A3;
+padding-bottom: 60px; /* Espaço para a paginação */
+position: relative;
+}
+
+.swiperContainer :global(.swiper-button-next),
+.swiperContainer :global(.swiper-button-prev) {
+top: auto;
+bottom: 0;
+margin-top: 0;
+}
+
+.swiperContainer :global(.swiper-button-next) {
+right: 40%;
+transform: translateX(20px);
+}
+
+.swiperContainer :global(.swiper-button-prev) {
+left: 40%;
+transform: translateX(-60px)
+}
+
+.swiperContainer :global(.swiper-pagination) {
+bottom: 0;
+}
+
+.mostReadSection {
+width: 100%;
+max-width: 900px;
+margin: 60px auto;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.grid {
+width: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 40px;
+justify-items: center;
+}
+
+.rankedItem {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 15px;
+}
+
+.trophy {
+margin-top: 10px;
+}
+
+.mainContent {
+/* O container branco central */
+background-color: #FCF1E2;
+border-radius: 20px;
+padding: 20px 40px;
+width: 90%;
+max-width: 1200px;
+margin: 50px auto 50px auto; /* Margem negativa para sobrepor o header */
+position: relative;
+z-index: 10;
+box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.mainContent h1 {
+text-align: center;
+color: #000000;
+font-size: 3.5rem;
+margin: 20px 0 40px 0;
+font-weight: bold;
+font-family: 'PonyPedia', sans-serif;
+}
