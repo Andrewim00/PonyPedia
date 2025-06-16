@@ -16,9 +16,9 @@ export default function SiteHeader(){
 
             <nav className="menu">
                 <div className="nav-links">
-                    <Link href={'/'} className="nav-item">Home</Link>
-                    <Link href={'/'} className="nav-item">O que somos?</Link>
-                    <Link href={'/'} className="nav-item">Sobre</Link>
+                    <Link href={'/home_page'} className="nav-item">Home</Link>
+                    <Link href={'/home_page'} className="nav-item">O que somos?</Link>
+                    <Link href={'/home_page'} className="nav-item">Sobre</Link>
                 </div>
                 <Link href={'/login'} className="botao-login">Login</Link>
             </nav>
