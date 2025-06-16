@@ -1,0 +1,247 @@
+/* Container principal da seção */
+.findPlaceSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background: transparent; /* Keep background transparent for full page effect */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Título da seção */
+.sectionTitle {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2.2em;
+  color: #4a0072; /* Deeper vibrant purple */
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Stronger shadow for emphasis */
+}
+
+/* Container do card de personagem */
+.characterCard {
+  background: rgba(255, 255, 255, 0.2); /* Translucent white background for glass effect */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glass-like shadow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
+  padding: 30px;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.characterCard:hover {
+  transform: translateY(-8px) scale(1.01); /* More pronounced lift and slight scale on hover */
+  box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.5); /* Stronger shadow on hover */
+}
+
+/* Container da imagem do personagem */
+.characterImage {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none; /* No shadow on image container */
+}
+
+.actualCharacterImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  animation: floatImage 4s ease-in-out infinite; /* Floating animation for image */
+}
+
+/* Floating image animation */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Informações do personagem */
+.characterInfo {
+  flex-grow: 1;
+}
+
+.characterName {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.8em;
+  color: #007bff; /* Bright blue for character name */
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.characterDescription {
+  font-size: 1.1em;
+  color: #333; /* Keep dark text for readability */
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Container de navegação */
+.navigationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Botões de seta */
+.arrowButton {
+  background: none;
+  border: none;
+  font-size: 2.5em; /* Slightly larger arrows */
+  color: #00bcd4; /* Bright cyan for arrows */
+  cursor: pointer;
+  padding: 0 10px;
+  transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.arrowButton:hover {
+  transform: scale(1.3); /* More pronounced scale */
+  text-shadow: 0 0 10px #00bcd4; /* Glow effect on hover */
+}
+
+/* Wrapper para os ícones de pônei */
+.ponyIconWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+/* Ícones de pônei */
+.ponyIcon {
+  width: 28px; /* Slightly larger */
+  height: 28px; /* Slightly larger */
+  background-color: #bbdefb; /* Light blue for inactive */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.ponyIcon:hover {
+  transform: translateY(-3px); /* More pronounced lift */
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.5); /* Subtle glow on hover */
+}
+
+/* Ícone de pônei ativo */
+.activePonyIcon {
+  background-color: #00bcd4; /* Bright cyan for active */
+  transform: scale(1.2); /* More pronounced scale */
+  box-shadow: 0 0 15px #00bcd4; /* Stronger glow for active */
+  animation: pulsePony 1.5s infinite ease-in-out; /* Pulsing animation for active pony */
+}
+
+/* Pulsing animation for active pony icon */
+@keyframes pulsePony {
+  0%, 100% { box-shadow: 0 0 15px #00bcd4; }
+  50% { box-shadow: 0 0 25px #00bcd4, 0 0 35px #00bcd4; }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .findPlaceSection {
+    padding: 50px 15px;
+  }
+
+  .characterCard {
+    max-width: 800px;
+    padding: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 2em;
+  }
+
+  .characterImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .characterName { font-size: 1.6em; }
+  .characterDescription { font-size: 1em; }
+}
+
+@media (max-width: 768px) {
+  .findPlaceSection {
+    padding: 40px 10px;
+  }
+
+  .characterCard {
+    max-width: 600px;
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sectionTitle {
+    font-size: 1.8em;
+    margin-bottom: 25px;
+  }
+
+  .characterImage {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .characterName { text-align: center; }
+  .characterDescription { text-align: center; }
+
+  .navigationContainer {
+    gap: 10px;
+  }
+
+  .arrowButton {
+    font-size: 1.8em;
+  }
+
+  .ponyIcon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .findPlaceSection {
+    padding: 30px 10px;
+  }
+
+  .characterCard {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .sectionTitle {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .characterImage {
+    width: 120px;
+    height: 120px;
+  }
+
+  .characterName { font-size: 1.3em; }
+  .characterDescription { font-size: 0.9em; }
+
+  .ponyIcon {
+    width: 18px;
+    height: 18px;
+  }
+} 

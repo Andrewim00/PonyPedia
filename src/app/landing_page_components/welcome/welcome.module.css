@@ -1,0 +1,138 @@
+/* Container principal da seção */
+.boasVindasSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 50px 20px;
+  background-color: var(--background-light);
+  font-family: Arial, sans-serif;
+}
+
+/* Card de conteúdo centralizado */
+.conteudoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: 15px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  animation: cardGlow 3s ease-in-out infinite;
+}
+
+/* Efeito de brilho para o card */
+.conteudoCard::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 6s linear infinite;
+}
+
+/* Título principal */
+.tituloPrincipal {
+  font-size: 2.5em;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+/* Container para a imagem */
+.containerImagem {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
+}
+
+.actualWelcomeImage {
+  width: 95%; /* Match previous placeholder width */
+  max-width: 700px; /* Match previous placeholder max-width */
+  height: auto; /* Allow height to adjust proportionally */
+  border-radius: 12px; /* Keep consistent border-radius */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for the image */
+  object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
+}
+
+/* Parágrafos de descrição */
+.paragrafoDescricao {
+  font-size: 1.1em;
+  color: #e0e0e0;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 25px;
+  max-width: 800px;
+  position: relative;
+  z-index: 1;
+}
+
+.paragrafoDescricao:last-child {
+  margin-bottom: 0;
+}
+
+/* Animações */
+@keyframes cardGlow {
+  0%, 100% { box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); }
+  50% { box-shadow: 0 8px 32px rgba(138, 43, 226, 0.4); }
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .conteudoCard {
+    max-width: 800px;
+    padding: 35px;
+  }
+  .tituloPrincipal { font-size: 2.2em; }
+  .actualWelcomeImage { height: 300px; } /* Adjust height for responsiveness */
+}
+
+@media (max-width: 768px) {
+  .boasVindasSection { padding: 40px 15px; }
+  .conteudoCard {
+    padding: 30px;
+    margin: 0 15px;
+  }
+  .tituloPrincipal { font-size: 1.8em; }
+  .actualWelcomeImage { height: 250px; } /* Adjust height for responsiveness */
+  .paragrafoDescricao {
+    font-size: 1em;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .boasVindasSection { padding: 30px 10px; }
+  .conteudoCard { padding: 25px 20px; }
+  .tituloPrincipal { font-size: 1.5em; }
+  .actualWelcomeImage { height: 200px; } /* Adjust height for responsiveness */
+  .paragrafoDescricao {
+    font-size: 0.95em;
+    line-height: 1.5;
+  }
+}
+
+/* Efeito hover para o card */
+@media (hover: hover) {
+  .conteudoCard:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+  }
+} 

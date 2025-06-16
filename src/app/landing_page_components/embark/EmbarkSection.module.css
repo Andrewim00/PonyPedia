@@ -1,0 +1,248 @@
+/* Container principal da seção */
+.embarkSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container do conteúdo */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.2); /* Translucent white background */
+  border-radius: 20px; /* Match character card radius */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glass-like shadow */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  border: 1px solid rgba(255, 255, 255, 0.18); /* Subtle white border */
+  padding: 40px; /* Add more padding inside the container */
+}
+
+/* Título principal */
+.mainTitle {
+  font-size: 3em;
+  color: #007bff; /* Bright blue for title */
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Container da imagem do pônei */
+.ponyImageContainer {
+  width: 300px;
+  height: 300px;
+  margin: 40px 0;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Imagem do pônei */
+.ponyImage {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.actualPonyImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures the GIF scales down to fit */
+}
+
+/* Placeholder da imagem */
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #28a745, #34d058);
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(40, 167, 69, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Botão de embarcar */
+.embarkButton {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+  color: white;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s ease-in-out infinite; /* Keep pulse animation */
+}
+
+.embarkButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3); /* Blue shadow on hover */
+}
+
+/* Efeito de brilho no botão */
+.embarkButton::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  ); /* Brighter shine effect */
+  transform: rotate(45deg);
+  animation: shine 3s linear infinite;
+}
+
+/* Descrição */
+.description {
+  font-size: 1.2em;
+  color: #333; /* Keep dark text for readability */
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Animações */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Blue shadow for pulse */
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5); /* Blue shadow for pulse */
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(45deg);
+  }
+}
+
+/* Pop animation for image on click */
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+.imagePop {
+  animation: popEffect 0.15s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .embarkSection {
+    padding: 50px 15px;
+  }
+
+  .mainTitle {
+    font-size: 2.5em;
+  }
+
+  .ponyImageContainer {
+    width: 250px;
+    height: 250px;
+  }
+
+  .description {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .embarkSection {
+    padding: 40px 10px;
+  }
+
+  .mainTitle {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .ponyImageContainer {
+    width: 200px;
+    height: 200px;
+    margin: 30px 0;
+  }
+
+  .description {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+
+  .embarkButton {
+    padding: 12px 30px;
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .embarkSection {
+    padding: 30px 10px;
+  }
+
+  .mainTitle {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .ponyImageContainer {
+    width: 150px;
+    height: 150px;
+    margin: 20px 0;
+  }
+
+  .description {
+    font-size: 0.9em;
+    padding: 0 15px;
+  }
+
+  .embarkButton {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+}
+
+/* Efeitos de hover para o botão */
+@media (hover: hover) {
+  .embarkButton:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+} 
