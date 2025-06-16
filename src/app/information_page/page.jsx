@@ -85,6 +85,7 @@ export default function informationPage(){
                             </aside>
                         </div>
                     </main>
+                    <div className={styles.vote}></div>
                 </div>
             </section>
 
